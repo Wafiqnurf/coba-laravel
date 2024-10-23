@@ -44,7 +44,7 @@ class CatatanController extends Controller
         $validatedData['user_id'] = auth()->id(); // Menambahkan ID pengguna yang sedang login
 
         Catatan::create($validatedData);
-        return redirect()->route('Catatan')->with('success_add', 'Catatan kesehatan berhasil ditambahkan.');
+        return redirect()->route('catatan')->with('success_add', 'Catatan kesehatan berhasil ditambahkan.');
     }
 
     public function destroy($id)
@@ -52,6 +52,6 @@ class CatatanController extends Controller
         $record = Catatan::find($id);
         $record->delete();
 
-        return redirect()->route('Catatan')->with('success_delete', 'Catatan kesehatan berhasil dihapus.');
+        return redirect()->route('catatan')->with('success_delete', 'Catatan kesehatan berhasil dihapus.');
     }
 }
