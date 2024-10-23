@@ -23,12 +23,12 @@ class CatatanController extends Controller
             ->addData('Tekanan Darah (Sistolik)', $chartData->pluck('tensi')->toArray())
             ->setXAxis($chartData->pluck('tanggal')->toArray());
 
-        return view('catatan.index', compact('records', 'chart'));
+        return view('Catatan.index', compact('records', 'chart'));
     }
 
     public function create()
     {
-        return view('catatan.create');
+        return view('Catatan.create');
     }
 
     public function store(Request $request)
@@ -44,7 +44,7 @@ class CatatanController extends Controller
         $validatedData['user_id'] = auth()->id(); // Menambahkan ID pengguna yang sedang login
 
         Catatan::create($validatedData);
-        return redirect()->route('catatan')->with('success_add', 'Catatan kesehatan berhasil ditambahkan.');
+        return redirect()->route('Catatan')->with('success_add', 'Catatan kesehatan berhasil ditambahkan.');
     }
 
     public function destroy($id)
@@ -52,6 +52,6 @@ class CatatanController extends Controller
         $record = Catatan::find($id);
         $record->delete();
 
-        return redirect()->route('catatan')->with('success_delete', 'Catatan kesehatan berhasil dihapus.');
+        return redirect()->route('Catatan')->with('success_delete', 'Catatan kesehatan berhasil dihapus.');
     }
 }
