@@ -6,7 +6,7 @@
         <h1>Kendalikan Gula Darah Dan Tensi Anda</h1>
     </div>
     <div class="container">
-        <button class="button"><a href="/catatan">Cek Riwayat Kesehatan Anda</a></button>
+        <button class="button"><a href="{{route('catatan')}}">Cek Riwayat Kesehatan Anda</a></button>
         <div class="row">
             <div class="card" data-aos="fade-up" data-aos-duration="1000">
                 <h3 class="title-card">Pentingnya Kontrol
