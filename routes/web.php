@@ -19,10 +19,12 @@ Route::get('/', function () {
 });
 
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard')->middleware('auth');
-Route::get('/catatan', [CatatanController::class, 'index'])->name('catatan')->middleware('auth');
-Route::get('/catatan/create', [CatatanController::class, 'create'])->name('catatan.create')->middleware('auth');
-Route::post('/catatan', [CatatanController::class, 'store'])->name('catatan.store')->middleware('auth');
-Route::post('/catatan/destroy/{id}', [CatatanController::class, 'destroy'])->name('catatan.destroy')->middleware('auth');
+Route::middleware(['auth'])->group(function () {
+    Route::get('/catatan', [CatatanController::class, 'index'])->name('catatan');
+    Route::get('/catatan/create', [CatatanController::class, 'create'])->name('catatan.create');
+    Route::post('/catatan', [CatatanController::class, 'store'])->name('catatan.store');
+    Route::delete('/catatan/{id}', [CatatanController::class, 'destroy'])->name('catatan.destroy');
+});
 
 Auth::routes();
 
