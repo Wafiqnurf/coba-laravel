@@ -10,8 +10,13 @@ use Illuminate\Notifications\Notifiable;
 class User extends Authenticatable
 {
     /** @use HasFactory<\Database\Factories\UserFactory> */
-    use HasFactory, Notifiable;
+    use HasApiTokens, HasFactory, Notifiable;
 
+    // Ubah dari hasOne menjadi hasMany
+    public function catatan()
+    {
+        return $this->hasMany(Catatan::class);
+    }
     /**
      * The attributes that are mass assignable.
      *
