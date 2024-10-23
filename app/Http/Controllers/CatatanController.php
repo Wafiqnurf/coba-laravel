@@ -23,7 +23,7 @@ class CatatanController extends Controller
             ->addData('Tekanan Darah (Sistolik)', $chartData->pluck('tensi')->toArray())
             ->setXAxis($chartData->pluck('tanggal')->toArray());
 
-        return view('catatan.catatan', compact('records', 'chart'));
+        return view('catatan.index', compact('records', 'chart'));
     }
 
     public function create()
