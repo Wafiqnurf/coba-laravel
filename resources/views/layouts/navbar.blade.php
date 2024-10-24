@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Healthcare</title>
+    <title>Diatensi Care</title>
 
     <!-- CSS -->
     <link rel="stylesheet" href="{{ asset('assets/css/styles.css') }}">
@@ -16,8 +16,8 @@
 <body>
     <nav id="navbar" class="navbar">
         <div class="logo">
-            <img src="{{ asset('assets/images/healthcare.png') }}" alt="Healthcare Logo">
-            <a href="/dashboard">Healthcare</a>
+            <img src="{{ asset('assets/images/healthcare.png') }}" alt="Diatensi Care Logo">
+            <a href="/dashboard">Diatensi Care</a>
         </div>
         <div class="avatar">
             <p id="username" style="cursor: pointer;"><span>{{ Auth::user()->name }}</span></p>

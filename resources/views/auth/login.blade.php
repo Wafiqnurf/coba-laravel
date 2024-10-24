@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- CSRF TOKEN -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>Login - Healthcare</title>
+    <title>Login - Diatensi Care</title>
     <style>
     body,
     html {
@@ -129,8 +129,8 @@
 <body>
     <div class="container">
         <div class="logo">
-            <img src="{{ asset('assets/images/healthcare.png') }}" alt="Healthcare Logo">
-            <h1>Healthcare</h1>
+            <img src="{{ asset('assets/images/healthcare.png') }}" alt="Diatensi Care Logo">
+            <h1>Diatensi Care</h1>
         </div>
         <form class="login-form" method="POST" action="{{ route('login') }}">
             @csrf

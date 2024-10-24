@@ -4,15 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Healthcare</title>
+    <title>Diatensi Care</title>
     <link rel="stylesheet" href="{{ asset('assets/css/styles.css') }}">
 </head>
 
 <body>
     <nav id="navbar" class="navbar">
         <div class="logo">
-            <img src="{{ asset('assets/images/healthcare.png') }}" alt="Healthcare Logo">
-            <a href="#">Healthcare</a>
+            <img src="{{ asset('assets/images/healthcare.png') }}" alt="Diatensi Care Logo">
+            <a href="#">Diatensi Care</a>
         </div>
         <div class="auth-links">
             <a href="/login"><span>Login</span></a> / <a href="/register">Sign Up</a>
@@ -21,7 +21,7 @@
 
     <section id="hero" class="hero">
         <div class="content">
-            <h1 class="title">Welcome to <span>Healthcare</span></h1>
+            <h1 class="title">Welcome to <span>Diatensi Care</span></h1>
             <p class="text">Kontrol kesehatan Anda dengan pemantauan dan perawatan terbaik</p>
             <button class="cta-button"><a href="">Konsultasi Sekarang</a></button>
         </div>
