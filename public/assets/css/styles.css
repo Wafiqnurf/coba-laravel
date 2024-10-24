@@ -348,7 +348,7 @@ textarea {
     .navbar .logo {
         display: flex;
         align-items: center;
-        font-size: 24px;
+        font-size: 1rem;
         font-weight: bold;
         margin-left: 0rem;
     }
