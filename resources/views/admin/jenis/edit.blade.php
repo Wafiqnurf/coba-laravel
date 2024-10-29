@@ -30,7 +30,7 @@
                 <label for="">Pilih Photo Jenis Tanaman</label>
                 <input type="hidden" name="old_image" value="{{$jenis->image}}">
                 <div>
-                    <img src="{{asset('storage/jenis/' . $jenis->image)}} " class="col-lg-4" alt="">
+                    <img src="{{asset('storage/public/jenis/' . $jenis->image)}} " class="col-lg-4" alt="">
                 </div>
                 <input type="file" class="form-control @error('image') is-invalid @enderror" name="image">
                 @error('image')

@@ -1,6 +1,6 @@
-<nav class="navbar">
-    <img src="/api/placeholder/24/24" alt="Logo" class="logo">
-    <div class="nav-links">
+<nav class="navbarr">
+    <img src="{{ asset('assets/images/images-removebg-preview.png') }}" alt="Logo" class="logo">
+    <div class="nav-link">
         <a href="#">Home</a>
         <a href="#">Tentang Kami</a>
         <a href="#">Berita</a>

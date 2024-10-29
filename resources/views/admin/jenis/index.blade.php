@@ -29,7 +29,7 @@
                     @foreach ($jenis as $jenis)
                     <tr>
                         <td>{{ $i++ }}</td>
-                        <td><img src="{{ asset('storage/jenis/' . $jenis->image) }}" height="100"></td>
+                        <td><img src="{{ asset('storage/public/jenis/' . $jenis->image) }}" height="100"></td>
                         <td>{{ $jenis->judul }}</td>
                         <td>
                             <a href="{{ route('jenis.edit', $jenis->id) }}" class="btn btn-warning">Edit</a>

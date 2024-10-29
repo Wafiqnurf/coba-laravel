@@ -30,7 +30,7 @@
                 <label for="">Pilih Photo Kegiatan</label>
                 <input type="hidden" name="old_image" value="{{$artikel->image}}">
                 <div>
-                    <img src="{{asset('storage/artikel/' . $artikel->image)}} " class="col-lg-4" alt="">
+                    <img src="{{asset('storage/public/artikel/' . $artikel->image)}} " class="col-lg-4" alt="">
                 </div>
                 <input type="file" class="form-control @error('image') is-invalid @enderror" name="image">
                 @error('image')
@@ -43,7 +43,7 @@
             <div class="form-group mb-3">
                 <label for="">Artikel Haritac</label>
                 <textarea name="desc" id="summernote">
-                        {!!  $artikel->desc !!} 
+                        {!!  $artikel->desc !!}
                     </textarea>
                 @error('desc')
                 <div class="text-danger">

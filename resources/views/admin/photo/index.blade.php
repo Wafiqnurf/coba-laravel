@@ -43,7 +43,7 @@
                     <tr>
                         <td>{{ $item->id }}</td>
                         <td>
-                            <img src="{{ asset('storage/photo/' . $item->image) }}" height="150" alt="">
+                            <img src="{{ asset('storage/public/photo/' . $item->image) }}" height="150" alt="">
                         </td>
                         <td>{{ $item->judul }}</td>
                         <td>
@@ -79,7 +79,8 @@
                                         <div class="form-group mb-3">
                                             <label for="photo">Pilih Photo</label>
                                             <div class="col-lg-4">
-                                                <img src="{{ asset('storage/photo/' . $item->image) }}" height="150" />
+                                                <img src="{{ asset('storage/public/photo/' . $item->image) }}"
+                                                    height="150" />
                                             </div>
                                             <input type="hidden" name="old_image" value="{{ $item->image }}">
                                             <input type="file" name="image" class="form-control">
