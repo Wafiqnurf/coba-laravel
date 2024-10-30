@@ -7,4 +7,5 @@
         <a href="#">Product</a>
         <a href="#">Galeri</a>
     </div>
+    <img src="{{ asset('assets/icons/menu.png') }}" alt="" class="menu">
 </nav>
