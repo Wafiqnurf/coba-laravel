@@ -1,4 +1,4 @@
-@extends('layouts.layouts')
+@extends('layouts.admin')
 
 @section('content')
 <div class="py-5" style="margin-top: 100px">

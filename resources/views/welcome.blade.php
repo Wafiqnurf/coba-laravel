@@ -60,91 +60,51 @@
 </section>
 <!-- About Section End -->
 
-<section class="news-section">
-    <h2 class="section-title">Berita UPTD BBH</h2>
-    <div class="news-container">
-        <div class="news-grid">
-            <!-- News Card 1 -->
-            <article class="news-card">
-                <div class="news-image">
-                    <img src="/api/placeholder/400/200" alt="News 1">
-                </div>
-                <div class="news-content">
-                    <h3 class="news-title">Title</h3>
-                    <p class="news-date">Tanggal</p>
-                    <p class="news-description">Deskripsi</p>
-                    <a href="#" class="news-link">Selengkapnya</a>
-                </div>
-            </article>
-
-            <!-- News Card 2 -->
-            <article class="news-card">
-                <div class="news-image">
-                    <img src="/api/placeholder/400/200" alt="News 2">
-                </div>
-                <div class="news-content">
-                    <h3 class="news-title">Title</h3>
-                    <p class="news-date">Tanggal</p>
-                    <p class="news-description">Deskripsi</p>
-                    <a href="#" class="news-link">Selengkapnya</a>
-                </div>
-            </article>
-
-            <!-- News Card 3 -->
-            <article class="news-card">
-                <div class="news-image">
-                    <img src="/api/placeholder/400/200" alt="News 3">
-                </div>
-                <div class="news-content">
-                    <h3 class="news-title">Title</h3>
-                    <p class="news-date">Tanggal</p>
-                    <p class="news-description">Deskripsi</p>
-                    <a href="#" class="news-link">Selengkapnya</a>
-                </div>
-            </article>
+<!-- Berita -->
+<section id="berita">
+    <div class="container py-5">
+        <div class="header-berita text-center" data-aos="fade-up">
+            <h2 class="fw-bold">Berita Kegiatan UPTD BBH</h2>
         </div>
-
-        <div class="more-news">
-            <button class="more-news-btn">Berita Lainnya</button>
+        <div class="row py-3">
+            @foreach ($artikels as $item )
+            <div class="card" data-aos="zoom-in-up">
+                <div class="card-img-holder">
+                    <img src="{{ asset('storage/public/artikel/' . $item->image) }}">
+                </div>
+                <h3 class="blog-title">{{$item->judul}}</h3>
+                <span class="blog-time">{{$item->create_at}}</span>
+                <p class="deskripsi">{!! Str::limit(strip_tags($item->desc), 100) !!}</p>
+                <div class="options">
+                    <span>
+                        #petanimodern
+                    </span>
+                    <a href="/detail/{{$item->slug}}">Selengkapnya</a>
+                </div>
+            </div>
+            @endforeach
+        </div>
+        <div class="footer-berita text-center" data-aos="fade-up">
+            <a href="/berita" class="btn">Berita Lainnya</a>
         </div>
     </div>
 </section>
+<!-- Berita End -->
 
-<section class="container">
+<!-- Product -->
+<section class="product-section">
     <h2 class="section-title">Product UPTD BBH</h2>
     <div class="product-grid">
+        @foreach ($jenis as $jenis)
         <div class="product-card">
             <div class="product-image">
-                <div class="product-image-placeholder"></div>
+                <img src="{{ asset('storage/public/jenis/' . $jenis->image) }}" alt="">
             </div>
-            <h3 class="product-title">Title</h3>
-            <p class="product-description">Deskripsi</p>
+            <h3 class="product-title">{{ $jenis->judul }}</h3>
+            <p class="product-description">{!! $jenis->desc !!}</p>
             <button class="button">Hubungi</button>
         </div>
-        <div class="product-card">
-            <div class="product-image">
-                <div class="product-image-placeholder"></div>
-            </div>
-            <h3 class="product-title">Title</h3>
-            <p class="product-description">Deskripsi</p>
-            <button class="button">Hubungi</button>
-        </div>
-        <div class="product-card">
-            <div class="product-image">
-                <div class="product-image-placeholder"></div>
-            </div>
-            <h3 class="product-title">Title</h3>
-            <p class="product-description">Deskripsi</p>
-            <button class="button">Hubungi</button>
-        </div>
-        <div class="product-card">
-            <div class="product-image">
-                <div class="product-image-placeholder"></div>
-            </div>
-            <h3 class="product-title">Title</h3>
-            <p class="product-description">Deskripsi</p>
-            <button class="button">Hubungi</button>
-        </div>
+        @endforeach
     </div>
 </section>
 
