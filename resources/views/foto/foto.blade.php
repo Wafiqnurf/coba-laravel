@@ -1,20 +1,13 @@
 @extends('layouts.layouts')
 @section('content')
 <!-- Foto -->
-<section id="foto" class="foto-detail" data-aos="zoom-in-up">
+<section id="foto" class="foto-detail" style="margin-top:80px" data-aos="zoom-in-up">
     <div class="container">
-        <div class="row-title">
-            <div class="title">
-                <h5>Foto Kegiatan</h5>
-            </div>
-            <a href="/foto" class="btn">Foto lainnya</a>
-        </div>
-        <div class="row">
+        <h2 class="section-title">Foto Kegiatan</h2>
+        <div class="photo-grid">
             @foreach ($photos as $photo)
-            <div class="card">
-                <div class="image-link" href="{{ asset('storage/photo/'. $photo->image) }}">
-                    <img src="{{ asset('storage/photo/'. $photo->image) }}" class="img-fluid" alt="">
-                </div>
+            <div class="photo-item"><img src="{{ asset('storage/public/photo/'. $photo->image) }}" class="img-fluid"
+                    alt="">
             </div>
             @endforeach
         </div>

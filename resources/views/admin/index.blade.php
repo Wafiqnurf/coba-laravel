@@ -17,7 +17,7 @@
                 <img src="{{ asset('assets/images/berita1.jpg') }}" alt="" class="card-image">
                 <div class="card-content">
                     <h5 class="card-title">Blog Berita</h5>
-                    <p class="card-text">Aur dan kelola berita kegiatan UPTD BBH</p>
+                    <p class="card-text">Atur dan kelola berita kegiatan UPTD BBH</p>
                     <a href="{{ route('blog') }}" class="card-btn">Detail</a>
                 </div>
             </div>
@@ -25,15 +25,15 @@
                 <img src="{{ asset('assets/images/berita2.jpg') }}" alt="" class="card-image">
                 <div class="card-content">
                     <h5 class="card-title">Foto Kegiatan</h5>
-                    <p class="card-text">Aur dan kelola foto kegiatan UPTD BBH</p>
+                    <p class="card-text">Atur dan kelola foto kegiatan UPTD BBH</p>
                     <a href="{{ route('photo') }}" class="card-btn">Detail</a>
                 </div>
             </div>
             <div class="card">
                 <img src="{{ asset('assets/images/berita2.jpg') }}" alt="" class="card-image">
                 <div class="card-content">
-                    <h5 class="card-title">Jenis Tanaman</h5>
-                    <p class="card-text">Aur dan kelola Jenis Tanaman UPTD BBH</p>
+                    <h5 class="card-title">Product</h5>
+                    <p class="card-text">Atur dan kelola Product UPTD BBH</p>
                     <a href="{{ route('jenis') }}" class="card-btn">Detail</a>
                 </div>
             </div>

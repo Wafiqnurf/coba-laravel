@@ -507,9 +507,9 @@ h1 {
     margin-bottom: 30px;
 }
 
-.photo-item {
-    background: #ddd;
-    aspect-ratio: 16/9;
+.photo-item img {
+    width: 250px;
+    height: 150px;
     border-radius: 4px;
 }
 
@@ -522,6 +522,15 @@ h1 {
     border: none;
     border-radius: 4px;
     cursor: pointer;
+}
+
+.view-all:hover {
+    background-color: #1ad51d;
+}
+
+.view-all a {
+    text-decoration: none;
+    color: #000;
 }
 
 footer {

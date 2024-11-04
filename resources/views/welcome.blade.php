@@ -107,21 +107,18 @@
         @endforeach
     </div>
 </section>
-
+<!-- Gallery Section -->
 <section class="gallery-section">
     <div class="container">
         <h2 class="section-title">Foto Kegiatan</h2>
         <div class="photo-grid">
-            <div class="photo-item"></div>
-            <div class="photo-item"></div>
-            <div class="photo-item"></div>
-            <div class="photo-item"></div>
-            <div class="photo-item"></div>
-            <div class="photo-item"></div>
-            <div class="photo-item"></div>
-            <div class="photo-item"></div>
+            @foreach ($photos as $photo)
+            <div class="photo-item"><img src="{{ asset('storage/public/photo/'. $photo->image) }}" class="img-fluid"
+                    alt="">
+            </div>
+            @endforeach
         </div>
-        <button class="view-all">View All</button>
+        <button class="view-all"><a href="/foto">View All</a></button>
     </div>
 </section>
 @endsection
