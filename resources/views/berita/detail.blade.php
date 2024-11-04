@@ -7,7 +7,7 @@
 
     <div class="row">
         <div class="detail-img" data-aos="fade-right" data-aos-duration="1000">
-            <img src="{{ asset('storage/artikel/' . $artikel->image) }}" alt="Tentang Kami" />
+            <img src="{{ asset('storage/public/artikel/' . $artikel->image) }}" alt="Tentang Kami" />
         </div>
 
         <div class="content" data-aos="fade-left" data-aos-duration="1000">

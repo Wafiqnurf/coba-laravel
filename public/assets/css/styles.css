@@ -165,11 +165,13 @@ h1 {
 }
 
 .about .row .detail-img {
-    flex: 1 1 45rem;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
 }
 
 .about .row .detail-img img {
-    width: 100%;
+    width: 75%;
     height: 550px;
     border-radius: 20px;
 }
@@ -239,6 +241,14 @@ h1 {
     font-size: 1.1rem;
     margin-top: 1rem;
     color: #2e7d32;
+}
+
+.about .bar a {
+    text-decoration: none;
+}
+
+.about .bar a:hover {
+    color: red;
 }
 
 /* Berita */
@@ -327,6 +337,85 @@ h1 {
 #berita .btn:hover {
     background-color: #fff;
     color: black;
+}
+
+/* Page Berita */
+#berita-berita {
+    background-color: #e8f5e9;
+}
+
+#berita-berita .header-berita {
+    margin-top: 4.5rem;
+}
+
+#berita-berita .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#berita-berita .card {
+    width: 20rem;
+    height: auto;
+    background: #fff;
+    border-radius: 1.5rem;
+    padding: 1.5rem;
+    overflow: hidden;
+    position: relative;
+    margin: 15px;
+    justify-content: center;
+    transition: ease 0.3s;
+}
+
+#berita-berita .card:hover {
+    transform: translateY(-10px);
+}
+
+#berita-berita .card-img-holder {
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+
+#berita-berita .card-img-holder img {
+    width: 100%;
+    height: 200px;
+    max-height: 15rem;
+    object-fit: cover;
+    border-radius: 1.5rem;
+}
+
+#berita-berita .blog-title {
+    color: #22215b;
+    padding: 1rem 0;
+    font-size: 1.5rem;
+}
+
+#berita-berita .blog-time {
+    font-size: 0.8rem;
+    color: #22215b;
+}
+
+#berita-berita .options {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1rem;
+}
+
+#berita-berita .options span {
+    font-weight: 400;
+    color: #22215b;
+}
+
+#berita-berita .options a {
+    text-decoration: none;
+    list-style-type: none;
+    color: red;
+}
+
+#berita-berita .options a:hover {
+    color: rgb(0, 34, 255);
 }
 
 .product-section {
