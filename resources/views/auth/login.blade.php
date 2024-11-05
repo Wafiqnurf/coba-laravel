@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- CSRF TOKEN -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>Login - Diatensi Care</title>
+    <link rel="shortcut icon" href="{{ asset('assets/icons/images-removebg-preview.ico') }}">
+    <title>Login - UPTD BBH</title>
     <style>
     body,
     html {
@@ -14,7 +15,7 @@
         padding: 0;
         font-family: Arial, sans-serif;
         height: 100%;
-        background: linear-gradient(135deg, #71b7e6, #9b59b6);
+        background: linear-gradient(135deg, #C0EBA6, #FFFBE6);
     }
 
     .container {
@@ -38,7 +39,7 @@
     }
 
     .logo h1 {
-        color: #c62e2e;
+        color: #347928;
         font-size: 28px;
         margin: 0;
     }
@@ -129,8 +130,8 @@
 <body>
     <div class="container">
         <div class="logo">
-            <img src="{{ asset('assets/images/healthcare.png') }}" alt="Diatensi Care Logo">
-            <h1>Diatensi Care</h1>
+            <img src="{{ asset('assets/images/images-removebg-preview.png') }}" alt="UPTD BBH">
+            <h1>UPTD Balai Benih Hortikultura</h1>
         </div>
         <form class="login-form" method="POST" action="{{ route('login') }}">
             @csrf
@@ -154,12 +155,6 @@
                 @enderror
             </div>
             <button type="submit" class="btn-login">Sign In</button>
-            <div class="forgot-password">
-                <a href="#">Forgot password?</a>
-            </div>
-            <div class="login-link">
-                <p>Belum punya akun? <a href="/register">Daftar di sini</a></p>
-            </div>
         </form>
     </div>
 </body>
