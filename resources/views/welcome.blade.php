@@ -92,7 +92,7 @@
 <!-- Berita End -->
 
 <!-- Product -->
-<section class="product-section">
+<section class="product-section" id="product">
     <h2 class="section-title">Product UPTD BBH</h2>
     <div class="product-grid">
         @foreach ($jenis as $jenis)
@@ -108,7 +108,7 @@
     </div>
 </section>
 <!-- Gallery Section -->
-<section class="gallery-section">
+<section class="gallery-section" id="gallery">
     <div class="container">
         <h2 class="section-title">Foto Kegiatan</h2>
         <div class="photo-grid">
