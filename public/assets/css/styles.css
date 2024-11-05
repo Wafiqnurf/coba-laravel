@@ -549,6 +549,7 @@ footer {
 .footer-section h3 {
     font-size: 18px;
     margin-bottom: 20px;
+    color: black;
 }
 
 .footer-section ul {
@@ -574,6 +575,79 @@ footer {
     display: flex;
     align-items: center;
     gap: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    footer {
+        padding: 30px 20px; /* Reduced padding and added horizontal padding */
+    }
+
+    .footer-grid {
+        display: grid;
+        grid-template-columns: 1fr; /* Mengubah menjadi 1 kolom */
+        gap: 20px; /* Mengurangi gap untuk tampilan vertikal */
+
+        margin: 0 auto; /* Membuat grid berada di tengah */
+    }
+
+    .footer-section h3 {
+        font-size: 18px;
+        margin-bottom: 20px;
+        text-align: center; /* Membuat judul berada di tengah */
+        color: black;
+        font-weight: 600;
+    }
+
+    .footer-section ul {
+        list-style: none;
+        padding: 0; /* Menghilangkan padding default */
+        margin: 0; /* Menghilangkan margin default */
+        text-align: center; /* Membuat list item berada di tengah */
+    }
+
+    .footer-section ul li {
+        margin-bottom: 10px;
+    }
+
+    .footer-section ul li a {
+        color: white; /* Membuat teks berwarna putih */
+        text-decoration: none; /* Menghilangkan garis bawah pada link */
+        display: block; /* Membuat link full width */
+        padding: 8px 0; /* Menambah padding vertical untuk area klik */
+    }
+
+    /* Efek hover opsional */
+    .footer-section ul li a:hover {
+        opacity: 0.8;
+    }
+
+    .social-icons {
+        justify-content: center; /* Center social icons */
+    }
+
+    .contact-info div {
+        justify-content: center; /* Center contact info */
+    }
+
+    .social-icons img {
+        width: 28px; /* Slightly larger icons for better touch targets */
+        height: 28px;
+    }
+}
+
+/* Extra small devices */
+@media screen and (max-width: 480px) {
+    footer {
+        padding: 25px 15px; /* Further reduced padding */
+    }
+
+    .footer-grid {
+        gap: 25px; /* Smaller gap for very small screens */
+    }
+
+    .footer-section h3 {
+        font-size: 15px;
+    }
 }
 
 /* Admin Blog */
