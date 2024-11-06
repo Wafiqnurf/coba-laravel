@@ -1,17 +1,94 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Primary Meta Tags -->
+    <title>UPTD Balai Benih Hortikultura Jatinangor - Pengembangan Benih Hortikultura Berkualitas</title>
+    <meta name="title" content="UPTD Balai Benih Hortikultura Jatinangor - Pengembangan Benih Hortikultura Berkualitas">
+    <meta name="description"
+        content="UPTD Balai Benih Hortikultura Jatinangor melayani pengembangan dan distribusi benih hortikultura berkualitas untuk Jawa Barat. Hubungi kami di (022) 7911067">
+    <meta name="keywords"
+        content="balai benih hortikultura, benih hortikultura, UPTD BBH, benih berkualitas, Jatinangor, Sumedang">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="Indonesia">
+    <meta name="author" content="UPTD Balai Benih Hortikultura">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://uptdbalaibenihhortikultural.com/">
+    <meta property="og:title" content="UPTD Balai Benih Hortikultura Jatinangor">
+    <meta property="og:description"
+        content="Pusat pengembangan dan distribusi benih hortikultura berkualitas untuk Jawa Barat">
+    <meta property="og:image" content="{{ asset('assets/icons/ic-logo.png') }}">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://uptdbalaibenihhortikultural.com/">
+    <meta property="twitter:title" content="UPTD Balai Benih Hortikultura Jatinangor">
+    <meta property="twitter:description"
+        content="Pusat pengembangan dan distribusi benih hortikultura berkualitas untuk Jawa Barat">
+    <meta property="twitter:image" content="{{ asset('assets/icons/ic-logo.png') }}">
+
+    <!-- Favicon -->
     <link rel="shortcut icon" href="{{ asset('assets/icons/images-removebg-preview.ico') }}">
-    <title>UPTD BBH</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('assets/icons/apple-touch-icon.png') }}">
+
+    <!-- Dynamic Meta Tags for Article Pages -->
+    @if (Request::segment(1) == 'detail')
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="{{ $artikel->judul }}">
+    <meta property="og:description" content="{{ Str::limit(strip_tags($artikel->content), 160) }}">
+    <meta property="og:url" content="{{ url('/detail/' . $artikel->slug) }}">
+    <meta property="article:published_time" content="{{ $artikel->created_at }}">
+    <meta property="article:modified_time" content="{{ $artikel->updated_at }}">
+    @if ($artikel->image)
+    <meta property="og:image" content="{{ asset('storage/public/artikel/' . $artikel->image) }}">
+    @else
+    <meta property="og:image" content="{{ asset('assets/icons/ic-logo.png') }}">
+    @endif
+    <title>{{ $artikel->judul }} - UPTD Balai Benih Hortikultura</title>
+    @endif
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="{{ url()->current() }}">
+
+    <!-- Stylesheets -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ asset('assets/css/styles.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.20/summernote-bs5.min.css">
 
-    {{-- Summernote CSS di antara Head--}}
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.20/summernote-bs5.min.css" />
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "UPTD Balai Benih Hortikultura",
+        "url": "https://uptdbalaibenihhortikultural.com",
+        "logo": "{{ asset('assets/icons/ic-logo.png') }}",
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+62-22-7911067",
+            "contactType": "customer service",
+            "email": "Uptdbbh@gmail.com"
+        },
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Jl. Ir. Soekarno km.23",
+            "addressLocality": "Jatinangor",
+            "addressRegion": "Sumedang",
+            "postalCode": "45363",
+            "addressCountry": "ID"
+        },
+        "sameAs": [
+            "https://facebook.com/UPTDBBHJatinangor",
+            "https://instagram.com/uptd_bbh_jatinangor"
+        ]
+    }
+    </script>
 </head>
 
 <body>
