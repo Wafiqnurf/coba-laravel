@@ -5,7 +5,7 @@
     <div class="hero-content">
         <h1>Selamat Datang</h1>
         <div class="subtitle">Di</div>
-        <h1>UPTD Balai Benih Hrtikultura</h1>
+        <h1> <span>UPTD Balai Benih Hrtikultura</span></h1>
         <p class="description">Disini kami menyediakan berbagai bibit dari tanaman hortikultura</p>
         <a href="#" class="cta-button">Hubungi Sekarang</a>
     </div>

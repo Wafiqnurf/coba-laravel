@@ -8,11 +8,12 @@
 }
 
 :root {
-    --bg-color: #ecfeed;
-    --second-bg-color: #afe6b2;
+    --bg-color: #ffffff;
+    --second-bg-color: #f0f0f0;
     --text-color: #060a04;
     --main-color: #17f725;
-    --accent-color: #3daff8;
+    --accent-color: #0bac3b;
+    --hover-color: #1ad51d;
 }
 
 body {
@@ -28,7 +29,7 @@ body {
     top: 0;
     left: 0;
     right: 0;
-    background-color: var(--main-color);
+    background-color: var(--accent-color);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
     z-index: 1000;
     transition: all 0.3s ease;
@@ -123,6 +124,13 @@ h1 {
     font-weight: bold;
 }
 
+h1 span {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    color: var(--main-color);
+}
+
 .subtitle {
     font-size: 2rem;
     margin-bottom: 1rem;
@@ -133,7 +141,7 @@ h1 {
     font-size: 1.2rem;
     margin-bottom: 2rem;
     max-width: 800px;
-    color: #fff;
+    color: var(--text-color);
 }
 
 .cta-button {
@@ -149,7 +157,7 @@ h1 {
 }
 
 .cta-button:hover {
-    background-color: #1ad51d;
+    background-color: var(--hover-color);
     color: #000;
 }
 
@@ -256,7 +264,7 @@ h1 {
 .about .feature-title {
     font-size: 1.1rem;
     margin-top: 1rem;
-    color: #2e7d32;
+    color: var(--accent-color);
 }
 
 .about .bar a {
@@ -291,6 +299,7 @@ h1 {
 
 #berita .card:hover {
     transform: translateY(-10px);
+    box-shadow: 0 2px 4px rgba(116, 211, 69, 0.9);
 }
 
 #berita .card-img-holder {
@@ -327,7 +336,7 @@ h1 {
 }
 
 #berita .options a:hover {
-    color: rgb(0, 34, 255);
+    color: var(--hover-color);
 }
 
 #berita .btn {
@@ -341,13 +350,13 @@ h1 {
 }
 
 #berita .btn:hover {
-    background-color: #fff;
+    background-color: var(--hover-color);
     color: black;
 }
 
 /* Page Berita */
 #berita-berita {
-    background-color: #e8f5e9;
+    background-color: var(--second-bg-color);
 }
 
 #berita-berita .header-berita {
@@ -459,7 +468,7 @@ h1 {
 }
 
 .product-card:hover {
-    transform: translateY(-20px);
+    box-shadow: 0 5px 10px rgba(116, 211, 69, 0.9);
 }
 
 .product-image {
@@ -482,14 +491,14 @@ h1 {
 }
 
 .product-description {
-    color: #666;
+    color: var(--text-color);
     margin-bottom: 15px;
 }
 
 .button {
-    background: #155724;
+    background: var(--main-color);
     width: 100px;
-    color: white;
+    color: var(--text-color);
     padding: 8px 16px;
     border: none;
     border-radius: 4px;
@@ -498,11 +507,11 @@ h1 {
 }
 
 .button:hover {
-    background-color: #1ad51d;
+    background-color: var(--hover-color);
 }
 
 .gallery-section {
-    background: #e8f5e9;
+    background: var(--second-bg-color);
     padding: 40px 0;
 }
 
@@ -524,7 +533,7 @@ h1 {
     display: block;
     width: fit-content;
     margin: 0 auto;
-    background: #ddd;
+    background: var(--main-color);
     padding: 10px 30px;
     border: none;
     border-radius: 4px;
@@ -532,7 +541,7 @@ h1 {
 }
 
 .view-all:hover {
-    background-color: #1ad51d;
+    background-color: var(--hover-color);
 }
 
 .view-all a {
@@ -541,7 +550,7 @@ h1 {
 }
 
 footer {
-    background: #1b5e20;
+    background: var(--accent-color);
     color: white;
     padding: 40px 0;
 }
