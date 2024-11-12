@@ -22,8 +22,8 @@ body {
 
 .navbarr {
     display: flex;
+    align-items: center; /* Vertically center items */
     justify-content: space-between;
-    align-items: center;
     padding: 1rem 5%;
     position: fixed;
     top: 0;
@@ -40,7 +40,9 @@ body {
 }
 
 .nav-link {
-    display: flex;
+    display: flex; /* Use flexbox for nav links */
+    justify-content: center; /* Center the nav links */
+    flex-grow: 1;
     gap: 2rem;
 }
 
