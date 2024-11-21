@@ -61,6 +61,9 @@
     <link rel="stylesheet" href="{{ asset('assets/css/styles.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.20/summernote-bs5.min.css">
 
+    <!-- AOS ANIMATION -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <!-- Structured Data -->
     <script type="application/ld+json">
     {
@@ -152,6 +155,13 @@
         });
     });
     </script>
+
+    <!-- AOS ANIMATION -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+    AOS.init();
+    </script>
+
     <script src="{{ asset('assets/js/script.js') }}"></script>
 </body>
 

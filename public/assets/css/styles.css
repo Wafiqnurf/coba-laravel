@@ -8,12 +8,13 @@
 }
 
 :root {
-    --bg-color: #ffffff;
-    --second-bg-color: #f0f0f0;
+    --bg-color: #d6efd8;
+    --second-bg-color: #80af81;
     --text-color: #060a04;
-    --main-color: #17f725;
-    --accent-color: #0bac3b;
+    --main-color: #508d4e;
+    --accent-color: #1a5319;
     --hover-color: #1ad51d;
+    --btn-color: #f4ce14;
 }
 
 body {
@@ -29,10 +30,11 @@ body {
     top: 0;
     left: 0;
     right: 0;
-    background-color: var(--accent-color);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+    background-color: var(--main-color);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.9);
     z-index: 1000;
     transition: all 0.3s ease;
+    color: #fff;
 }
 
 .logo {
@@ -44,17 +46,20 @@ body {
     justify-content: center; /* Center the nav links */
     flex-grow: 1;
     gap: 2rem;
+    cursor: pointer;
 }
 
 .nav-link a {
     text-decoration: none;
-    color: #333;
-    font-weight: 500;
+    font-size: large;
+    color: #fff;
+    font-weight: 600;
     transition: color 0.3s ease;
+    cursor: pointer;
 }
 
 .nav-link a:hover {
-    color: #fff;
+    color: #000;
 }
 
 .menu {
@@ -100,8 +105,8 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    text-align: center;
+    align-items: start;
+    text-align: start;
     color: #fff;
     position: relative;
 }
@@ -118,19 +123,20 @@ body {
 .hero-content {
     position: relative;
     z-index: 1;
+    margin-left: 10rem;
 }
 
 h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
     margin-bottom: 1rem;
     font-weight: bold;
 }
 
 h1 span {
-    font-size: 2.5rem;
+    font-size: 3rem;
     margin-bottom: 1rem;
     font-weight: bold;
-    color: var(--main-color);
+    color: #1ad51d;
 }
 
 .subtitle {
@@ -140,14 +146,14 @@ h1 span {
 }
 
 .description {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     margin-bottom: 2rem;
     max-width: 800px;
     color: var(--text-color);
 }
 
 .cta-button {
-    background-color: var(--accent-color);
+    background-color: var(--btn-color);
     color: var(--text-color);
     padding: 1rem 2rem;
     border: none;
@@ -171,12 +177,13 @@ h1 span {
 .about h2 {
     color: #000000;
     text-align: center;
-    font-size: 2.6rem;
+    font-size: 2rem;
     margin-top: 3rem;
+    font-weight: 600;
 }
 
 .about h2 span {
-    color: var(--main-color);
+    color: var(--accent-color);
 }
 
 .about .row {
@@ -213,9 +220,10 @@ h1 span {
 
 .about .row .content h3 {
     text-align: center;
-    color: var(--main-color);
+    color: var(--accent-color);
     font-size: 1.8rem;
     margin-bottom: 1rem;
+    font-weight: 600;
 }
 
 .about .row .content p {
@@ -281,6 +289,7 @@ h1 span {
 #berita {
     background-color: var(--second-bg-color);
 }
+
 #berita .row {
     display: flex;
     flex-wrap: wrap;
@@ -346,7 +355,7 @@ h1 span {
     padding: 0.5rem 1rem;
     border-radius: 0.5rem;
     font-weight: 400;
-    background: var(--main-color);
+    background: var(--btn-color);
     color: var(--text-color);
     cursor: pointer;
 }
@@ -359,10 +368,7 @@ h1 span {
 /* Page Berita */
 #berita-berita {
     background-color: var(--second-bg-color);
-}
-
-#berita-berita .header-berita {
-    margin-top: 4.5rem;
+    margin-top: 4.8rem;
 }
 
 #berita-berita .row {
@@ -498,7 +504,7 @@ h1 span {
 }
 
 .button {
-    background: var(--main-color);
+    background: var(--btn-color);
     width: 100px;
     color: var(--text-color);
     padding: 8px 16px;
@@ -535,7 +541,7 @@ h1 span {
     display: block;
     width: fit-content;
     margin: 0 auto;
-    background: var(--main-color);
+    background: var(--btn-color);
     padding: 10px 30px;
     border: none;
     border-radius: 4px;
@@ -552,7 +558,8 @@ h1 span {
 }
 
 footer {
-    background: var(--accent-color);
+    background: var(--main-color);
+    margin-top: 0rem;
     color: white;
     padding: 40px 0;
 }
@@ -561,6 +568,12 @@ footer {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 40px;
+}
+
+.footer-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .footer-section h3 {
