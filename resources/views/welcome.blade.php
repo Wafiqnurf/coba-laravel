@@ -22,12 +22,9 @@
         <div class="content" data-aos="fade-left" data-aos-duration="1000">
             <h3>UPTD Balai Benih Hortikultura</h3>
             <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Exercitationem, nostrum.
-            </p>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit quod
-                placeat molestiae iure laborum cumque non odit culpa et porro.
+                UPTD Balai Benih Induk Tanaman Hortikultura dan Pengembangan Lahan Kering mempunyai tugas melaksanakan
+                penyiapan benih sumber dan benih bermutu hortikultura serta melaksanakan perencanaan, pembinaan,
+                pengawasan dan pengembangan teknis budidaya lahan kering.
             </p>
         </div>
     </div>
@@ -111,11 +108,11 @@
 <!-- Gallery Section -->
 <section class="gallery-section" id="gallery">
     <div class="container">
-        <h2 class="section-title" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1500">Foto Kegiatan
+        <h2 class="section-title" data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1500">Foto Kegiatan
         </h2>
         <div class="photo-grid">
             @foreach ($photos as $photo)
-            <div class="photo-item" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500"><img
+            <div class="photo-item" data-aos="fade-left" data-aos-easing="linear" data-aos-duration="1500"><img
                     src="{{ asset('storage/public/photo/'. $photo->image) }}" class="img-fluid" alt="">
             </div>
             @endforeach
