@@ -4,7 +4,7 @@
 <div class="py-5" style="margin-top: 100px">
     <div class="container col-xxl-8">
         <h4>Halaman Blog Artikel</h4>
-        <a href="{{route('blog.create')}}" class="btn btn-primary">Buat Berita</a>
+        <a href="{{route('blog.create')}}" class="btn btn-primary">Tambah Berita</a>
         <a href="/dashboard" class="btn btn-success">Dashboard</a>
 
         @if (session()->has('success'))

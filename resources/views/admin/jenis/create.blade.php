@@ -5,17 +5,17 @@
     <div class="container col-xl-8">
         {{--Navigasi--}}
         <div class="create d-flex">
-            <a href="{{ route('jenis') }}">Jenis</a>
+            <a href="{{ route('jenis') }}">Product</a>
             <div class="mb-1"> | </div>
-            <a href="#">Buat Jenis Tanaman</a>
+            <a href="#">Tambah Product</a>
         </div>
 
-        <h4>Halaman Jenis Tanaman</h4>
+        <h4>Halaman Product</h4>
 
         <form action="{{ route('jenis.store') }}" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="form-group mb-3">
-                <label for="">Maximum Judul Kegiatan</label>
+                <label for="">Nama Product</label>
                 <input type="text" class="form-control @error('judul') is-invalid @enderror" name="judul"
                     value="{{ old('judul') }}">
                 @error('judul')
@@ -26,7 +26,7 @@
             </div>
 
             <div class="form-group mb-3">
-                <label for="">Pilih Photo Kegiatan</label>
+                <label for="">Pilih Photo</label>
                 <input type="file" class="form-control @error('image') is-invalid @enderror" name="image">
                 @error('image')
                 <div class="invalid-feedback">
@@ -36,7 +36,7 @@
             </div>
 
             <div class="form-group mb-3">
-                <label for="">Deskripsi Jenis Tanaman</label>
+                <label for="">Deskripsi Product</label>
                 <textarea name="desc" id="summernote">
                         {{ old('desc') }}
                     </textarea>

@@ -7,15 +7,15 @@
         <div class="create d-flex">
             <a href="{{ route('jenis') }}">Blog</a>
             <div class="mb-2"> | </div>
-            <a href="#">Edit Jenis Tanaman</a>
+            <a href="#">Edit Product</a>
         </div>
 
-        <h4>Halaman Edit Jenis Tanaman</h4>
+        <h4>Halaman Edit Product</h4>
 
         <form action="{{ route('jenis.update', $jenis->id) }}" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="form-group mb-3">
-                <label for="">Judul Kegiatan</label>
+                <label for="">Nama Product</label>
                 <input type="text" class="form-control @error('judul') is-invalid @enderror" name="judul"
                     value="{{ old('judul',  $jenis->judul) }}">
 
@@ -27,7 +27,7 @@
             </div>
 
             <div class="form-group mb-3">
-                <label for="">Pilih Photo Jenis Tanaman</label>
+                <label for="">Pilih Photo</label>
                 <input type="hidden" name="old_image" value="{{$jenis->image}}">
                 <div>
                     <img src="{{asset('storage/public/jenis/' . $jenis->image)}} " class="col-lg-4" alt="">
@@ -41,7 +41,7 @@
             </div>
 
             <div class="form-group mb-3">
-                <label for="">Deskripsi Jenis Tanaman</label>
+                <label for="">Deskripsi Product</label>
                 <textarea name="desc" id="summernote">
                         {!!  $jenis->desc !!}
                     </textarea>

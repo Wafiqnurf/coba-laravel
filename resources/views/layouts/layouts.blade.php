@@ -76,7 +76,7 @@
             "@type": "ContactPoint",
             "telephone": "+62-22-7911067",
             "contactType": "customer service",
-            "email": "Uptdbbh@gmail.com"
+            "email": "pulahta.bpbhat@gmail.com"
         },
         "address": {
             "@type": "PostalAddress",
@@ -126,7 +126,7 @@
                     <div class="contact-info">
                         <div>(022) 7911067</div>
                         <div>082377434837</div>
-                        <div>Uptdbbh@gmail.com</div>
+                        <div>pulahta.bpbhat@gmail.com</div>
                     </div>
                 </div>
 
