@@ -223,6 +223,11 @@ body {
     font-size: 0.875rem;
 }
 
+.create a {
+    list-style: none;
+    text-decoration: none;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     .blog-table {
